@@ -101,7 +101,8 @@ Select the best rider based on proximity. Respond with ONLY the rider ID as a nu
         // Return only id and name
         return {
             id: selectedRider.Id,
-            name: selectedRider.Name
+            name: selectedRider.Name,
+            allRiders:sortedRiders
         };
 
     } catch (error) {
