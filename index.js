@@ -2,11 +2,12 @@ const {json}= require("express")
 const express = require("express")
 const { router } = require("./Routes")
 const { routesRouter } = require("./Routes/routesRouter")
-
+const cors = require("cors")
 
 const app = express()
 
 
+app.use(cors())
 app.use(json())
 app.use("/deliveryAI", router)
 app.use("/routes", routesRouter)
